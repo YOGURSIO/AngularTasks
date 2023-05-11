@@ -14,7 +14,7 @@ export class NewCardComponent {
   pokemonName: string = '';
   taskDescription: string = '';
 
-
+  //Adds a card to the list of cards with the image of the pokemon, name of the pokemon, and the task description
   async onAddCard() {
     const pkImage = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
     console.log(pkImage);
