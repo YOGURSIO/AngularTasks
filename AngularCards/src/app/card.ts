@@ -1,5 +1,6 @@
 export interface Card {
-    id: number;
+    id?: number;
     pokemonName: string;
     taskDescription: string;
+    imgURL: string;
 }
