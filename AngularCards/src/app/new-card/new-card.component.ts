@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { PokeApiService } from '../poke-api.service';
+import { Card } from '../card';
+import { CardsService } from '../cards.service';
 
 @Component({
   selector: 'app-new-card',
@@ -10,17 +12,22 @@ import { PokeApiService } from '../poke-api.service';
   ]
 })
 export class NewCardComponent {
-  pokeApiService = inject(PokeApiService);
   pokemonName: string = '';
   taskDescription: string = '';
+
+  constructor(private cardsService: CardsService, private pokeApiService: PokeApiService) {}
 
   //Adds a card to the list of cards with the image of the pokemon, name of the pokemon, and the task description
   async onAddCard() {
     const pkImage = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
-    console.log(pkImage);
-    console.log('Added a card!');
-    console.log(this.pokemonName);
-    console.log(this.taskDescription);
+    pkImage.then((imgUrl: string) => {
+      const newCard: Card = {
+        imgURL: imgUrl,
+        pokemonName: this.pokemonName,
+        taskDescription: this.taskDescription
+      }
+      this.cardsService.addOneCard(newCard);
+    })
   }
 
 }
