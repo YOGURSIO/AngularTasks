@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "pokemonName": "ditto",
+            "taskDescription": "Algo",
+            "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+        },
+        {
+            "id": 1,
+            "pokemonName": "pikachu",
+            "taskDescription": "Algo",
+            "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+        },
+        {
+            "id": 2,
+            "pokemonName": "charizard",
+            "taskDescription": "Chicago",
+            "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+        }
+    ]
+}
