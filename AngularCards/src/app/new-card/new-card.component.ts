@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { PokeApiService } from '../poke-api.service';
-import { Card } from '../card';
 import { CardsService } from '../cards.service';
+import { Card } from "../card";
 
 @Component({
   selector: 'app-new-card',
