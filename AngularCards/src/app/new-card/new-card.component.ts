@@ -26,6 +26,7 @@ export class NewCardComponent {
       taskDescription: this.taskDescription
     }
     this.cardsService.addOneCard(newCard);
+    
   }
 
 }
