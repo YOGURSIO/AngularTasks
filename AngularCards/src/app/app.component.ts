@@ -12,5 +12,6 @@ export class AppComponent {
   cards: Array<Card> = [];
 
   constructor(private cardsService : CardsService){
+    cardsService.getCards().then(cards => {this.cards = cards});
   }
 }
