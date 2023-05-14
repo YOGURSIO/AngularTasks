@@ -6,14 +6,12 @@ import { Card } from './card';
 })
 export class CardsService {
   url: string = 'http://localhost:3000/tasks';
-  cards: Card[] = [];
 
   constructor() { }
 
   async getCards(): Promise<Card[]> {
     const response = await fetch(this.url);
-    const cards = await response.json();
-    return cards;
+    return await response.json();
   }
 
   async getCardsByID(id: number): Promise<Card> {
@@ -30,7 +28,19 @@ export class CardsService {
       body: JSON.stringify(card),
     }
 
-    const response = await fetch(this.url, settings);
+    await fetch(this.url, settings);
+  }
+
+  async editCard(card: Card): Promise<void> {
+    const settings = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(card),
+    }
+
+    await fetch(`${this.url}/${card.id}`, settings);
   }
 
   async removeOneCard(id: number): Promise<void> {
@@ -41,6 +51,6 @@ export class CardsService {
       }
     }
 
-    const response = await fetch(`${this.url}/${id}`, settings);
+    await fetch(`${this.url}/${id}`, settings);
   }
 }

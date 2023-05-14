@@ -1,8 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { PokeApiService } from '../poke-api.service';
 import { Card } from '../card';
 import { CardsService } from '../cards.service';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-new-card',
@@ -20,7 +19,15 @@ export class NewCardComponent {
 
   //Adds a card to the list of cards with the image of the pokemon, name of the pokemon, and the task description
   async onAddCard() {
-    const pkImage = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
+    let pkImage = '';
+    try {
+      pkImage = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
+    } catch (error) {
+      alert(`Pokemon "${this.pokemonName}" not found!`);
+    } finally {
+      this.pokemonName = '';
+      this.taskDescription = '';
+    }
     const newCard: Card = {
       imgURL: pkImage,
       pokemonName: this.pokemonName,
