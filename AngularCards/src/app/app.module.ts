@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewCardComponent } from './new-card/new-card.component';
 import { GeneralCardComponent } from './general-card/general-card.component';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GeneralCardComponent } from './general-card/general-card.component';
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

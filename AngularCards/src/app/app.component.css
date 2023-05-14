@@ -67,3 +67,15 @@ header > img:hover {
     padding-top: 50px;
   }
 }
+
+@media screen and (max-width: 540px){
+  header > h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px){
+  header > img {
+    display: none;
+  }
+}
