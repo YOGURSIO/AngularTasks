@@ -5,6 +5,12 @@
   <h2>Add cards:</h2>
   <app-new-card></app-new-card>
 </header>
-<div class="container">
-  <app-general-card *ngFor="let card of cards" [card]="card"></app-general-card>
+<div class="main-container">
+  <h1 class="centered">Tasks to-do by pokemon:</h1>
+  <div class="centered" *ngIf="cards.length === 0">
+    <h2>No cards yet!</h2>
+  </div>
+  <div class="cards-container centered" *ngIf="cards.length > 0">
+    <app-general-card *ngFor="let card of cards" [card]="card"></app-general-card>
+  </div>
 </div>

@@ -10,12 +10,11 @@ import { Location } from '@angular/common';
   selector: 'app-general-card',
   template: `
   <section class="generalCard">
-    <img class="pkImage" [src]="this.card.imgURL">
+    <img class="pkImage" [src]="this.card.imgURL" alt="Pokemon image">
     <h2 class ="pokemonName" >{{this.card.pokemonName}}</h2>
     <p class ="taskDescription" >{{this.card.taskDescription}}</p>
-    <button (click) = "edit = !edit">editar</button>
+    <button (click) = "edit = !edit">Edit</button>
     <button (click)="delete()">Delete Card</button>
-
   </section>
 `,
   styleUrls: ['./general-card.component.css'],
@@ -26,7 +25,7 @@ import { Location } from '@angular/common';
 export class GeneralCardComponent {
   newTaskDescription: string = "";
   constructor(private cardsService: CardsService, private location: Location) {}
-  
+
   @Input() card!: Card;
   edit: boolean = false;
 
@@ -36,5 +35,5 @@ export class GeneralCardComponent {
   async delete(){
 
   }
-  
+
 }

@@ -10,5 +10,8 @@
     </div>
   </div>
   <span class="spacer"></span>
-  <button [class]="!pokemonName || !taskDescription ? 'disabled' : 'enabled'" [disabled]="!pokemonName || !taskDescription" (click)="onAddCard()">Add card</button>
+  <button [class]="!pokemonName || !taskDescription ? 'disabled' : 'enabled'"
+          [disabled]="!pokemonName || !taskDescription"
+          (click)="onAddCard()">Add card
+  </button>
 </div>
