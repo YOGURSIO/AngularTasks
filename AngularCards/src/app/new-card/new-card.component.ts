@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { PokeApiService } from '../poke-api.service';
+import { Card } from '../card';
 import { CardsService } from '../cards.service';
-import { Card } from "../card";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-new-card',
@@ -26,7 +27,7 @@ export class NewCardComponent {
       taskDescription: this.taskDescription
     }
     this.cardsService.addOneCard(newCard);
-    
+    location.reload();
   }
 
 }

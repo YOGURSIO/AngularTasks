@@ -15,6 +15,10 @@ import { Location } from '@angular/common';
     <p class ="taskDescription" >{{this.card.taskDescription}}</p>
     <button (click) = "edit = !edit">Edit</button>
     <button (click)="delete()">Delete Card</button>
+    <div *ngIf="edit">
+    <input type="text" [(ngModel)]="newTaskDescription">
+    <button (click)="save()">Save</button>
+    </div>
   </section>
 `,
   styleUrls: ['./general-card.component.css'],
@@ -31,9 +35,11 @@ export class GeneralCardComponent {
 
  async save()
   {
+    this.card.taskDescription = this.newTaskDescription;
   }
   async delete(){
-
+    await this.cardsService.removeOneCard(this.card.id!);
+    location.reload();
   }
 
 }
