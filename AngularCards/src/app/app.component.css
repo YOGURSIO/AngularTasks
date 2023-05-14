@@ -1,0 +1,36 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  display: flex;
+  background-color: red;
+}
+
+header > h2 {
+  align-self: center;
+}
+
+img {
+  height: 100%;
+  margin: 0 10px 0 10px;
+}
+
+app-new-card {
+  margin-left: 20px;
+  width: 30%;
+}
+
+.container {
+  margin-top: 10vh;
+}
+
+@media screen and (max-height: 500px) {
+  header {
+    height: 50px;
+  }
+  .container {
+    margin-top: 50px;
+  }
+}
