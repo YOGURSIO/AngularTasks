@@ -1,0 +1,40 @@
+import { Component } from '@angular/core';
+import { PokeApiService } from '../poke-api.service';
+import { NewCardComponent } from '../new-card/new-card.component';
+import { Card } from '../card';
+import { Input } from '@angular/core';
+import { CardsService } from '../cards.service';
+import { Location } from '@angular/common';
+
+@Component({
+  selector: 'app-general-card',
+  template: `
+  <section class="generalCard">
+    <img class="pkImage" [src]="this.card.imgURL">
+    <h2 class ="pokemonName" >{{this.card.pokemonName}}</h2>
+    <p class ="taskDescription" >{{this.card.taskDescription}}</p>
+    <button (click) = "edit = !edit">editar</button>
+    <button (click)="delete()">Delete Card</button>
+
+  </section>
+`,
+  styleUrls: ['./general-card.component.css'],
+  providers: [
+    PokeApiService,
+  ]
+})
+export class GeneralCardComponent {
+  newTaskDescription: string = "";
+  constructor(private cardsService: CardsService, private location: Location) {}
+  
+  @Input() card!: Card;
+  edit: boolean = false;
+
+ async save()
+  {
+  }
+  async delete(){
+
+  }
+  
+}

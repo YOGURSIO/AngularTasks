@@ -6,5 +6,5 @@
   <app-new-card></app-new-card>
 </header>
 <div class="container">
-
+  <app-general-card *ngFor="let card of cards" [card]="card"></app-general-card>
 </div>
