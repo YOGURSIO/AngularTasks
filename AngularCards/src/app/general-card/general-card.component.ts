@@ -13,11 +13,12 @@ import { Location } from '@angular/common';
     <img class="pkImage" [src]="this.card.imgURL">
     <h2 class ="pokemonName" >{{this.card.pokemonName}}</h2>
     <p class ="taskDescription" >{{this.card.taskDescription}}</p>
-    <button (click) = "edit = !edit">editar</button>
+    <button (click) = "edit = !edit">Edit</button>
     <button (click)="delete()">Delete Card</button>
     <div *ngIf="edit">
     <input type="text" [(ngModel)]="newTaskDescription">
-    <button (click)="save()">Save</button>
+    <button (click)="save()" [disabled]="newTaskDescription === ''">Save</button>
+
     </div>
   </section>
 `,
@@ -33,10 +34,12 @@ export class GeneralCardComponent {
   @Input() card!: Card;
   edit: boolean = false;
 
+  // Save the new description 
  async save()
   {
     this.card.taskDescription = this.newTaskDescription;
   }
+  // When delete the card, the page does not refresh, the location import does this automatically 
   async delete(){
     await this.cardsService.removeOneCard(this.card.id!);
     location.reload();

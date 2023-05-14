@@ -13,9 +13,9 @@
       "id": 1
     },
     {
-      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
-      "pokemonName": "onix",
-      "taskDescription": "",
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      "pokemonName": "pikachu",
+      "taskDescription": "no vuela",
       "id": 2
     }
   ]
