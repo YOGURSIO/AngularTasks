@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+      "pokemonName": "pikachu",
+      "taskDescription": "algo",
+      "id": 2
+    },
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
+      "pokemonName": "charmander",
+      "taskDescription": "flamea",
+      "id": 3
+    },
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png",
+      "pokemonName": "Squirtle",
+      "taskDescription": "Aguatero",
+      "id": 4
+    }
+  ]
+}

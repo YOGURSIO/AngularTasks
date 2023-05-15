@@ -13,6 +13,10 @@ export class PokeApiService {
     const pokemon = await response.json();
     return pokemon.sprites.front_default;
   }
-
+  async getPokemonImgByName2(pkName: string) : Promise<string> {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pkName.trim().toLowerCase()}`);
+    const pokemon = await response.json();
+    return pokemon.sprites.back_default;
+  }
 
 }

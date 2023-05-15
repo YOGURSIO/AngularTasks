@@ -3,4 +3,5 @@ export interface Card {
     pokemonName: string;
     taskDescription: string;
     imgURL: string;
+   imgURLback: string;
 }
