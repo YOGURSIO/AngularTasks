@@ -19,22 +19,26 @@ export class NewCardComponent {
 
   //Adds a card to the list of cards with the image of the pokemon, name of the pokemon, and the task description
   async onAddCard() {
-    let pkImage = '';
     try {
-      pkImage = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
+      const pkImage = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
+
+      const newCard: Card = {
+        imgURL: pkImage,
+        pokemonName: this.pokemonName,
+        taskDescription: this.taskDescription
+      }
+
+      this.cardsService.addOneCard(newCard);
+      location.reload();
     } catch (error) {
       alert(`Pokemon "${this.pokemonName}" not found!`);
     } finally {
-      this.pokemonName = '';
-      this.taskDescription = '';
+      this.clearInputs();
     }
-    const newCard: Card = {
-      imgURL: pkImage,
-      pokemonName: this.pokemonName,
-      taskDescription: this.taskDescription
-    }
-    this.cardsService.addOneCard(newCard);
-    location.reload();
   }
-
+  
+  clearInputs() {
+    this.pokemonName = '';
+    this.taskDescription = '';
+  }
 }
