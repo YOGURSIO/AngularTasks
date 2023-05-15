@@ -6,33 +6,7 @@ import { CardsService } from '../cards.service';
 
 @Component({
   selector: 'app-general-card',
-  template: `
-
-  <section class="generalCard">
-    <img class="pkImage" [src]="this.card.imgURL">
-    <h2 class ="pokemonName" >{{this.card.pokemonName}}</h2>
-    <p class ="taskDescription" >{{this.card.taskDescription}}</p>
-    <button (click) = "edit = !edit">Edit</button>
-    <button (click)="delete()">Delete Card</button>
-    <div *ngIf="edit">
-    <input type="text" [(ngModel)]="newTaskDescription">
-    <button (click)="save()" [disabled]="newTaskDescription === ''">Save</button>
-
-    </div>
-  </section>
-    <section class="generalCard">
-      <img class="pkImage" [src]="this.card.imgURL" alt="Pokemon image">
-      <h2 class="pokemonName">{{this.card.pokemonName}}</h2>
-      <p class="taskDescription">{{this.card.taskDescription}}</p>
-      <button (click)="edit = !edit">Edit</button>
-      <button (click)="delete()">Delete Card</button>
-      <div *ngIf="edit">
-        <input type="text" [(ngModel)]="newTaskDescription">
-        <button (click)="save()" [disabled]="newTaskDescription === ''">Save</button>
-      </div>
-    </section>
-  `,
-
+  templateUrl: './general-card.component.html',
   styleUrls: ['./general-card.component.css'],
   providers: [
     PokeApiService,
