@@ -21,14 +21,13 @@ export class NewCardComponent {
   //Adds a card to the list of cards with the image of the pokemon, name of the pokemon, and the task description
   async onAddCard() {
     try {
-      const pkImage = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
-     const backImage = await this.pokeApiService.getPokemonImgByName2(this.pokemonName);
+      const pokemon = await this.pokeApiService.getPokemonImgByName(this.pokemonName);
+
       const newCard: Card = {
-        imgURL: pkImage,
-        imgURLback: backImage,
+        imgURL: pokemon.sprites.frontImgUrl,
+        imgURLback: pokemon.sprites.backImgUrl,
         pokemonName: this.pokemonName,
         taskDescription: this.taskDescription,
-        
       }
 
       this.cardsService.addOneCard(newCard);
