@@ -1,25 +1,53 @@
 {
   "tasks": [
     {
-      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
-      "pokemonName": "pikachu",
-      "taskDescription": "algo",
-      "id": 2
-    },
-    {
       "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
       "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
       "pokemonName": "charmander",
-      "taskDescription": "flamea",
+      "taskDescription": "tira Fuego",
       "id": 3
     },
     {
       "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
       "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png",
       "pokemonName": "Squirtle",
-      "taskDescription": "Aguatero",
+      "taskDescription": "Tira agua",
       "id": 4
+    },
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+      "pokemonName": "bulbasaur",
+      "taskDescription": "Ramas",
+      "id": 5
+    },
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+      "pokemonName": "pikachu",
+      "taskDescription": "adad",
+      "id": 6
+    },
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png",
+      "pokemonName": "blastoise",
+      "taskDescription": "evolution",
+      "id": 12
+    },
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
+      "pokemonName": "charizard",
+      "taskDescription": "evolution",
+      "id": 13
+    },
+    {
+      "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png",
+      "imgURLback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/500.png",
+      "pokemonName": "emboar",
+      "taskDescription": "Fire",
+      "id": 14
     }
   ]
 }
