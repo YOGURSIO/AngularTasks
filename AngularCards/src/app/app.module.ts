@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { NewCardComponent } from './new-card/new-card.component';
 import { GeneralCardComponent } from './general-card/general-card.component';
 import { CommonModule } from "@angular/common";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewCardComponent,
-    GeneralCardComponent
+    GeneralCardComponent,
+    HeaderComponent
   ],
   imports: [
     FormsModule,
