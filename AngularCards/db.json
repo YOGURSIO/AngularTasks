@@ -3,20 +3,20 @@
     {
       "id": 0,
       "pokemonName": "ditto",
-      "taskDescription": "Algo",
+      "taskDescription": "Hacer las compras",
       "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
     },
     {
+      "id": 1,
       "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
       "pokemonName": "pikachu",
-      "taskDescription": "volar",
-      "id": 1
+      "taskDescription": "Cargar la batería del tesla"
     },
     {
+      "id": 2,
       "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
-      "pokemonName": "onix",
-      "taskDescription": "",
-      "id": 2
+      "pokemonName": "charmander",
+      "taskDescription": "Prender el fuego"
     }
   ]
 }
